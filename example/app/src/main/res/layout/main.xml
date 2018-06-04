@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:orientation="vertical">
+
+		<TextView
+			android:text="@string/hello_world"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:maxLines="2"
+			android:hint="请输入账号"
+			android:id="@+id/mainEditText1"/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:text="打开浏览器百度"
+				android:textAllCaps="false"
+				android:id="@+id/mainButton1"
+				android:layout_weight="1.0"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:text="直接浏览百度"
+				android:id="@+id/mainButtonbai"
+				android:layout_weight="1.0"/>
+
+		</LinearLayout>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="打开电话"
+			android:id="@+id/mainButton2"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="文件流形势保存文件"
+			android:id="@+id/mainButton3"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="打开摄像头拍照"
+			android:id="@+id/mainButton4"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="打开相册，读取图片"
+			android:id="@+id/mainButton5"/>
+
+		<ImageView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:src="@drawable/ic_launcher"
+			android:id="@+id/mainImageView1"/>
+
+	</LinearLayout>
+
+</ScrollView>
+

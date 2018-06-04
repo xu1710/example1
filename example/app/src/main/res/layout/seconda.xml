@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+
+		<com.xujingrong.example.TitleLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:id="@+id/secondaEditText1"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="提示上一个activity的传递内容"
+				android:id="@+id/secondaButton1"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="打开progressDialog"
+				android:id="@+id/secondaButton2"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="打开AlertDialog"
+				android:id="@+id/secondaButton3"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="发送一条标准广播"
+				android:id="@+id/secondaButton4"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="使用sharedpreference保存数据"
+				android:id="@+id/secondaButton5"/>
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:orientation="horizontal">
+
+				<CheckBox
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:id="@+id/secondaCheckBox1"/>
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="复选框"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="horizontal">
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="创建数据库"
+					android:layout_weight="1.0"
+					android:id="@+id/secondaButton6"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="添加数据"
+					android:layout_weight="1.0"
+					android:id="@+id/secondaButton7"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="升级"
+					android:layout_weight="1.0"
+					android:id="@+id/secondaButton8"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="查询"
+					android:id="@+id/secondaButton9"
+					android:layout_weight="1.0"/>
+
+			</LinearLayout>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="发送通知"
+				android:id="@+id/secondaButton10"/>
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="horizontal">
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="播放音乐"
+					android:id="@+id/secondaButton11"
+					android:layout_weight="1.0"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="暂停"
+					android:id="@+id/secondaButton12"
+					android:layout_weight="1.0"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="停止"
+					android:id="@+id/secondaButton13"
+					android:layout_weight="1.0"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="horizontal">
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="播放视频"
+					android:id="@+id/secondaButton14"
+					android:layout_weight="1.0"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="暂停"
+					android:id="@+id/secondaButton15"
+					android:layout_weight="1.0"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:text="停止"
+					android:id="@+id/secondaButton16"
+					android:layout_weight="1.0"/>
+
+			</LinearLayout>
+
+			<VideoView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:id="@+id/secondaVideoView1"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Button"/>
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Button"/>
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Button"/>
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Button"/>
+
+		</com.xujingrong.example.TitleLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+
