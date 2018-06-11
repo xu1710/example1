@@ -11,8 +11,8 @@
 		android:orientation="vertical">
 
 		<com.xujingrong.example.TitleLayout
-			android:layout_width="fill_parent"
-			android:layout_height="fill_parent"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
 			android:orientation="vertical">
 
 			<EditText
@@ -136,58 +136,48 @@
 
 			</LinearLayout>
 
-			<LinearLayout
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:orientation="horizontal">
-
-				<Button
-					android:layout_height="wrap_content"
-					android:layout_width="0dp"
-					android:text="播放视频"
-					android:id="@+id/secondaButton14"
-					android:layout_weight="1.0"/>
-
-				<Button
-					android:layout_height="wrap_content"
-					android:layout_width="0dp"
-					android:text="暂停"
-					android:id="@+id/secondaButton15"
-					android:layout_weight="1.0"/>
-
-				<Button
-					android:layout_height="wrap_content"
-					android:layout_width="0dp"
-					android:text="停止"
-					android:id="@+id/secondaButton16"
-					android:layout_weight="1.0"/>
-
-			</LinearLayout>
-
-			<VideoView
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:id="@+id/secondaVideoView1"/>
-
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:text="Button"/>
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:text="Button"/>
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:text="Button"/>
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:text="Button"/>
+			
 
 		</com.xujingrong.example.TitleLayout>
 
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:text="播放视频"
+				android:id="@+id/secondaButton14"
+				android:layout_weight="1.0"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:text="暂停"
+				android:id="@+id/secondaButton15"
+				android:layout_weight="1.0"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:text="停止"
+				android:id="@+id/secondaButton16"
+				android:layout_weight="1.0"/>
+
+		</LinearLayout>
+
+		<VideoView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:id="@+id/secondaVideoView1"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Button"/>
+		
 	</LinearLayout>
 
 </ScrollView>

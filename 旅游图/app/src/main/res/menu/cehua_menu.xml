@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/item1"
+        android:title="学习心得"/>
+	<item
+        android:id="@+id/item2"
+        android:title="关于"/>
+	
+	<item
+		android:id="@+id/j"
+		android:title="谢谢使用">
+		<menu>
+			<item>
+			</item>
+		</menu>
+	</item>
+    
+</menu>

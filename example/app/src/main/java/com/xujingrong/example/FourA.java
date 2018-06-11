@@ -47,8 +47,8 @@ public class FourA extends Base implements View.OnClickListener
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.fouraButton1) {
-			sendRequestWithHttpURLConnection();
-            //sendRequestWithOkHttp();
+			//sendRequestWithHttpURLConnection();
+            sendRequestWithOkHttp();
         }
     }
 
@@ -60,7 +60,7 @@ public class FourA extends Base implements View.OnClickListener
 					HttpURLConnection connection = null;
 					BufferedReader reader = null;
 					try {
-						URL url = new URL("http://www.baidu.com");
+						URL url = new URL("https://www.baidu.com");
 						connection = (HttpURLConnection) url.openConnection();
 						connection.setRequestMethod("GET");
 						connection.setConnectTimeout(8000);
@@ -100,4 +100,70 @@ public class FourA extends Base implements View.OnClickListener
 				}
 			});
     }
+	private void sendRequestWithOkHttp() {
+        new Thread(new Runnable() {
+				@Override
+				public void run() {
+					try {
+						OkHttpClient client = new OkHttpClient();
+						Request request = new Request.Builder()
+                            // 指定访问的服务器地址是电脑本机
+                            //.url("http://10.0.2.2/get_data.json")
+							.url("https://www.baidu.com")
+                            .build();
+						Response response = client.newCall(request).execute();
+						String responseData = response.body().string();
+						//parseJSONWithGSON(responseData);
+//                    parseJSONWithJSONObject(responseData);
+//                    parseXMLWithSAX(responseData);
+//	                  parseXMLWithPull(responseData);
+                    showResponse(responseData);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}).start();
+    }
+	private void parseXMLWithPull(String xmlData) {
+        try {
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            XmlPullParser xmlPullParser = factory.newPullParser();
+            xmlPullParser.setInput(new StringReader(xmlData));
+            int eventType = xmlPullParser.getEventType();
+            String id = "";
+            String name = "";
+            String version = "";
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                String nodeName = xmlPullParser.getName();
+                switch (eventType) {
+						// 开始解析某个结点
+                    case XmlPullParser.START_TAG: {
+							if ("id".equals(nodeName)) {
+								id = xmlPullParser.nextText();
+							} else if ("name".equals(nodeName)) {
+								name = xmlPullParser.nextText();
+							} else if ("version".equals(nodeName)) {
+								version = xmlPullParser.nextText();
+							}
+							break;
+						}
+						// 完成解析某个结点
+                    case XmlPullParser.END_TAG: {
+							if ("app".equals(nodeName)) {
+								Log.d("MainActivity", "id is " + id);
+								Log.d("MainActivity", "name is " + name);
+								Log.d("MainActivity", "version is " + version);
+							}
+							break;
+						}
+                    default:
+                        break;
+                }
+                eventType = xmlPullParser.next();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+	
 }

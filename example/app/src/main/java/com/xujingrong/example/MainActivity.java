@@ -40,6 +40,9 @@ import android.provider.DocumentsContract;
 import android.content.ContentUris;
 import android.annotation.TargetApi;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 public class MainActivity extends Base
 {
 	private EditText editText0;
@@ -75,7 +78,14 @@ public class MainActivity extends Base
 		}
 		//设置ImageView中的图片
 		imagev=(ImageView) findViewById(R.id.mainImageView1);
-		imagev.setImageResource(R.drawable.ic_launcher);
+		Glide.with(this)
+			.load(R.drawable.ic_launcher)
+			//.placeholder(R.drawable.loading)
+			//.error(R.drawable.error)
+			.diskCacheStrategy(DiskCacheStrategy.NONE)
+			.override(100, 100)
+			.into(imagev);
+		//imagev.setImageResource(R.drawable.ic_launcher);
 		//进度条可见与否
 		/*
 		 ProgressBar progressb=(ProgressBar) findViewById(R.id.mainProgressBar1);

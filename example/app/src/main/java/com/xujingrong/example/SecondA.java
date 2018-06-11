@@ -27,6 +27,10 @@ import java.io.File;
 import android.os.Environment;
 import android.widget.VideoView;
 import android.widget.MediaController;
+import android.net.Uri;
+import org.litepal.crud.DataSupport;
+import org.litepal.tablemanager.Connector;
+import java.util.List;
 
 public class SecondA extends Base implements View.OnClickListener
 {
@@ -56,9 +60,11 @@ public class SecondA extends Base implements View.OnClickListener
 		dbHelper=new MyDatabaseHelper(this,"BookStore.db",null,1);
 		//videoview实例化
 		videoView=(VideoView) findViewById(R.id.secondaVideoView1);
+		/*
 		mediaController=new MediaController(this);
 		videoView.setMediaController(mediaController);
 		mediaController.setMediaPlayer(videoView);
+		*/
 		//edittext实例化
 		sedit1 = (EditText) findViewById(R.id.secondaEditText1);
 		//读取sharedpreference内容
@@ -173,6 +179,9 @@ public class SecondA extends Base implements View.OnClickListener
 				break;
 			case R.id.secondaButton6:
 				dbHelper.getWritableDatabase();
+				;
+						Connector.getDatabase();
+						//DataSupport.deleteAll(Book.class, "price < ?", "15");
 				//删除
 				///SQLiteDatabase db = dbHelper.getWritableDatabase();
                 ///db.delete("Book", "pages > ?", new String[] { "500" });
@@ -193,12 +202,26 @@ public class SecondA extends Base implements View.OnClickListener
                 values.put("pages", 510);
                 values.put("price", 19.95);
                 db.insert("Book", null, values); // 插入第二条数据
+						;
+						Book book = new Book();
+              		  	book.setName("The Da Vinci Code");
+               			book.setAuthor("Dan Brown");
+                		book.setPages(454);
+             		    book.setPrice(16.96);
+            		    book.setPress("Unknow");
+                		book.save();
 				break;
 			case R.id.secondaButton8:
 				SQLiteDatabase db2 = dbHelper.getWritableDatabase();
                 ContentValues values2 = new ContentValues();
                 values2.put("price", 10.99);
                 db2.update("Book", values2, "name = ?", new String[] { "The Da Vinci Code" });
+				;
+						Book book2 = new Book();
+                		book2.setPrice(14.95);
+                		book2.setPress("Anchor");
+                		//book2.updateAll("name = ? and author = ?", "The Da Vinci Code", "Dan Brown");
+						book2.updateAll();
 				break;
 			case R.id.secondaButton9:
 				// 查询Book表中所有的数据
@@ -216,6 +239,15 @@ public class SecondA extends Base implements View.OnClickListener
                         Log.d("SecondA", "book pages is " + pages);
                         Log.d("SecondA", "book price is " + price);
                     } while (cursor.moveToNext());
+					;
+							List<Book> books = DataSupport.findAll(Book.class);
+							for (Book book3: books) {
+								Log.d("MainActivi", "book name is " + book3.getName());
+								Log.d("MainActivi", "book author is " + book3.getAuthor());
+								Log.d("MainActivi", "book pages is " + book3.getPages());
+								Log.d("MainActivi", "book price is " + book3.getPrice());
+								Log.d("MainActivi", "book press is " + book3.getPress());
+							}
                 }
                 cursor.close();
 				break;
@@ -262,13 +294,16 @@ public class SecondA extends Base implements View.OnClickListener
 				if (!videoView.isPlaying()) {
                     videoView.start(); // 开始播放
 				}
+				Toast.makeText(this,"视频开始",Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.secondaButton15:
+				Toast.makeText(this,"视频暂停",Toast.LENGTH_SHORT).show();
 				if (videoView.isPlaying()) {
                     videoView.pause(); // 暂停播放
 				}
 				break;
 			case R.id.secondaButton16:
+				Toast.makeText(this,"视频重新开始",Toast.LENGTH_SHORT).show();
 				if (videoView.isPlaying()) {
                     videoView.resume();//重新开始
                 }
@@ -298,6 +333,7 @@ public class SecondA extends Base implements View.OnClickListener
         }
     }
 	//视频播放准备
+	/*
 	private void initVideoPath() {
         try {
             File file = new File(Environment.getExternalStorageDirectory(), "movie.mp4");
@@ -306,12 +342,17 @@ public class SecondA extends Base implements View.OnClickListener
             e.printStackTrace();
         }
     }
-	/*
-	private void initVideoPath() {
-        File file = new File(Environment.getExternalStorageDirectory(), "movie.mp4");
-        videoView.setVideoPath(file.getPath()); // 指定视频文件的路径
-    }
 	*/
+	
+	private void initVideoPath() {
+       // File file1 = new File(Environment.getExternalStorageDirectory(), "movie.mp4");
+      //  videoView.setVideoPath(file1.getPath()); // 指定视频文件的路径
+		String uri = "android.resource://" + getPackageName() + "/" + R.raw.movie;
+		videoView.setVideoURI(Uri.parse(uri));
+		//videoView.start();
+		Toast.makeText(this,"准备开始",Toast.LENGTH_SHORT).show();
+    }
+	
 	//其他活动启动此活动时方便数据传递
 	public static void ActionStart(Context context, String date)
 	{

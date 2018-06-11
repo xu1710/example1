@@ -12,13 +12,12 @@
 		android:id="@+id/fouraButton1"/>
 
 	<ScrollView
-		android:layout_height="wrap_content"
+		android:layout_height="match_parent"
 		android:layout_width="match_parent">
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:layout_width="match_parent"
-			android:text="Text"
 			android:id="@+id/fouraTextView1"/>
 
 	</ScrollView>
