@@ -6,7 +6,7 @@ public class Traver
 
     private int Sid;
 
-    public Traver(String name, int Id) {
+    public Traver(String name,int Id) {
         this.name = name;
         this.Sid = Id;
     }

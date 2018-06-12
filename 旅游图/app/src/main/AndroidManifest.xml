@@ -46,7 +46,7 @@
 
         <activity
             android:name=".BanjiA"
-			android:screenOrientation="portrait"
+			
 			android:theme="@style/abouta"
             android:label="成绩表" >
         </activity>
