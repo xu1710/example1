@@ -5,5 +5,7 @@
     <list>
         <mapping class="com.tengxianzx.xu.STravel"></mapping>
     </list>
+	<!--
 	<storage value="external"></storage>
+	-->
 </litepal>

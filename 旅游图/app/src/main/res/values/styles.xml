@@ -35,7 +35,13 @@
 		<item name="android:windowFullscreen">false</item>
 		<item name="colorPrimary">#3ecccc</item>
 		<item name="colorPrimaryDark">#3ecccc</item>
-		<item name="colorAccent">#ffff87</item>
+		<item name="colorAccent">#000000</item>
     </style>
+	
+	<style name="AlertDialogCustom" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+	</style>
+	
 	
 </resources>

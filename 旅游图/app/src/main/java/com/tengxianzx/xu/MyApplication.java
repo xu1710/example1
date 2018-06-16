@@ -11,11 +11,12 @@ public class MyApplication extends Application
 	@Override
 	public void onCreate()
 	{
-		context=getApplicationContext();
+		context = getApplicationContext();
 		LitePalApplication.initialize(context);
 	}
-	
-	public static Context getContext(){
+
+	public static Context getContext()
+	{
 		return context;
 	}
 }

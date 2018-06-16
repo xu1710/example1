@@ -1,7 +1,8 @@
 package com.tengxianzx.xu;
 
-import java.util.List;
 import android.app.Activity;
+
+import java.util.List;
 import java.util.ArrayList;
 
 public class Acollector

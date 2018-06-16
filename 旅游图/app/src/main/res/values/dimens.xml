@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="alertDialogTitle">30dp</dimen>
+    <dimen name="alertDialogCheck">30dp</dimen>
+    <dimen name="alertDialogText">25dp</dimen>
+</resources>

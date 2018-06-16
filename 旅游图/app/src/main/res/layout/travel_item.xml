@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="55dp"
 	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:orientation="vertical"
+	android:orientation="horizontal"
+	android:gravity="center_vertical"
 	android:id="@+id/travelitemLinearLayout1">
 
 	<LinearLayout
+		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
+		android:layout_weight="1"
 		android:orientation="vertical"
-		android:id="@+id/travelitemLinearLayout2">
+		android:layout_marginLeft="5dp">
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:id="@+id/travelitemTextView1"/>
+			android:id="@+id/travelitemTextView1"
+			android:textSize="13sp"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:id="@+id/travelitemTextView2"/>
+			android:id="@+id/travelitemTextView2"
+			android:textSize="18sp"
+			android:textColor="#FF0A4CE9"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="0dp"
+		android:layout_weight="3"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_marginRight="5dp">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:id="@+id/travel_itemTextView3"
+			android:layout_width="match_parent"
+			android:textSize="18sp"
+			android:singleLine="true"
+			android:textColor="#FF3A6AE8"/>
 
 	</LinearLayout>
 

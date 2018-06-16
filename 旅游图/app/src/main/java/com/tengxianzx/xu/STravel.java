@@ -4,19 +4,8 @@ import org.litepal.crud.DataSupport;
 
 public class STravel extends DataSupport {
 
-    private int id;
-
-    private String sname;
-
-    private String ssheng;
-
-    private String sdaxue;
-
-    private String smajor;
-
-	private int sid;
-	
-	private String spassword;
+    private int id,sid,schengji;
+    private String sname,ssheng,sdaxue,smajor,spassword;
 	
     public int getId() {
         return id;
@@ -72,6 +61,14 @@ public class STravel extends DataSupport {
 
     public void setSpassword(String spassword) {
         this.spassword = spassword;
+    }
+	
+	public int getSchengji() {
+        return schengji;
+    }
+
+    public void setSchengji(int sid) {
+        this.schengji = sid;
     }
 }
 

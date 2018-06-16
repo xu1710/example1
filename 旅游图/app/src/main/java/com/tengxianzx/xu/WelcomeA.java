@@ -2,8 +2,8 @@ package com.tengxianzx.xu;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.content.Intent;
 import android.view.WindowManager;
+import android.content.Intent;
 import android.content.SharedPreferences;
 
 public class WelcomeA extends Base
@@ -17,12 +17,9 @@ public class WelcomeA extends Base
 		{
 			getActionBar().hide();
 		}
-		/*
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  
-							 WindowManager.LayoutParams.FLAG_FULLSCREEN);  
-							 */
 		SharedPreferences sp=getSharedPreferences("login", MODE_PRIVATE);
 		passw = sp.getInt("lpassw", 0);
+		sp.getInt("shujuku", 0);
 		Handler handler = new Handler();
 		handler.postDelayed(new Runnable() {
 				@Override

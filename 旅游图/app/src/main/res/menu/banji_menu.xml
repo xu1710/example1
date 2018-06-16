@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/item1"
+        android:title="@string/bj_m_dq"
+		android:showAsAction="never"/>
+    
+	<item
+        android:id="@+id/item2"
+        android:title="@string/bj_m_zy"
+		android:showAsAction="never">
+	</item>
+	
+	<item
+        android:id="@+id/item3"
+        android:title="@string/bj_m_px"
+		android:showAsAction="never">
+		<menu>
+			
+			<item
+				android:id="@+id/itempx1"
+				android:title="@string/bj_m_xh"
+				android:showAsAction="never">
+			</item>
+			
+			<item
+				android:id="@+id/itempx2"
+				android:title="@string/bj_m_cj"
+				android:showAsAction="never">
+			</item>
+			
+		</menu>
+	</item>
+	
+	<item
+        android:id="@+id/item4"
+        android:title="@string/exit"
+		android:showAsAction="never"/>
+</menu>

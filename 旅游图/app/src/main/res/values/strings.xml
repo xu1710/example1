@@ -2,6 +2,17 @@
 <resources>
 
     <string name="app_name">旅游图</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="abouta">关于</string>
+    <string name="banjia">成绩表</string>
+    <string name="xindea">学习心得</string>
+    <string name="bj_m_dq">按地区筛选</string>
+    <string name="bj_m_zy">按专业筛选</string>
+    <string name="bj_m_px">排序</string>
+    <string name="bj_m_xh">按学号升序</string>
+    <string name="bj_m_cj">按成绩降序</string>
+    <string name="exit">退出</string>
+    <string name="ch_m_xx">谢谢使用</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
 
 </resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/xinxi_bjTextView1xh"
+		android:textSize="16sp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/xinxi_bjTextView2xm"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:textSize="20sp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/xinxi_bjTextView3dx"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:textSize="20sp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/xinxi_bjTextView4zy"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:textSize="20sp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/xinxi_bjTextView5cs"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:textSize="20sp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/xinxi_bjTextView6cj"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:textSize="20sp"/>
+	
+</LinearLayout>
+
