@@ -2,14 +2,16 @@ package com.tengxianzx.xu;
 
 public class Traver
 {
-    private int Sid,lid,lchengji;
+    private int id;
+	private String lid;
+	private String lchengji;
 	private String name,major,lpassw,lsheng,lcollege,ssheng;
 
-    public Traver(String name, int Id, String college, String major,
-				  String sheng, int lid, String passw, int lcj)
+    public Traver(String name, String lid, String college, String major,
+				  String sheng, int Id, String passw, String lcj)
 	{
         this.name = name;
-        this.Sid = Id;
+        this.id = Id;
 		this.major = major;
 		this.lsheng = sheng;
 		this.lid = lid;
@@ -27,9 +29,9 @@ public class Traver
         return name;
     }
 
-    public int getSid()
+    public int getid()
 	{
-        return Sid;
+        return id;
     }
 
 	public String getmajor()
@@ -42,7 +44,7 @@ public class Traver
         return lsheng;
     }
 
-	public int getlid()
+	public String getlid()
 	{
         return lid;
     }
@@ -56,13 +58,13 @@ public class Traver
 	{
 		return lcollege;
 	}
-	
+
 	public String getssheng()
 	{
 		return ssheng;
 	}
-	
-	public int getlchengji()
+
+	public String getlchengji()
 	{
 		return lchengji;
 	}

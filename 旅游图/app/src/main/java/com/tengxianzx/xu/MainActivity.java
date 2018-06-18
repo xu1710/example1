@@ -1,7 +1,6 @@
 package com.tengxianzx.xu;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -17,6 +16,10 @@ import android.support.design.widget.NavigationView;
 import android.support.annotation.NonNull;
 
 import java.util.Calendar;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.IOException;
 
 import org.litepal.tablemanager.Connector;
 import com.bumptech.glide.Glide;
@@ -27,11 +30,13 @@ public class MainActivity extends Base
 {
 	private int shujuku;
 	private long firstTime = 0;
+	private String packName="com.tengxianzx.xu";
+	private String DB_NAME="StudentTravel.db";
 	private ImageView miv1,miv2;
 	private DrawerLayout drawer;
 	private RequestManager glideRequest;
 	private NavigationView navigationView;
-	
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
 	{
@@ -42,7 +47,6 @@ public class MainActivity extends Base
 		ActionBar actionbar=getSupportActionBar();
 		actionbar.setTitle("旅游图");
 		init();
-		Connector.getDatabase();
 		SharedPreferences sp=getSharedPreferences("login", MODE_PRIVATE);
 		shujuku = sp.getInt("shujuku", 0);
 		if (shujuku == 0)
@@ -51,9 +55,10 @@ public class MainActivity extends Base
 			SharedPreferences.Editor e= sp1.edit();
 			e.putInt("shujuku", 2);
 			e.commit();
-			SAdd.adds();
+			//Connector.getDatabase();
+			//SAdd.adds();
 		}
-		//Log.d("main", shujuku + "");
+		LogUtil.d("main", shujuku + "");
 		initn();
 		isexit();
     }
@@ -79,7 +84,7 @@ public class MainActivity extends Base
 	public void initn()
 	{
 		navigationView.setNavigationItemSelectedListener(new 
-						NavigationView.OnNavigationItemSelectedListener(){
+			NavigationView.OnNavigationItemSelectedListener(){
 				@Override
 				public boolean onNavigationItemSelected(MenuItem p1)
 				{
@@ -130,13 +135,15 @@ public class MainActivity extends Base
         }
 	}
 	//设置时间不能进入
-	public void isexit(){
+	public void isexit()
+	{
 		Calendar calendar = Calendar.getInstance();
 		int year = calendar.get(Calendar.YEAR);
-		int month = calendar.get(Calendar.MONTH)+1;
+		int month = calendar.get(Calendar.MONTH) + 1;
 		int day = calendar.get(Calendar.DAY_OF_MONTH);
-		int date=year*1000+month*100+day;
-		if(date>2018618){
+		int date=year * 1000 + month * 100 + day;
+		if (date > 2018618)
+		{
 			Acollector.finishall();
 		}
 	}

@@ -16,7 +16,7 @@
 		<EditText
 			android:layout_height="wrap_content"
 			android:layout_width="match_parent"
-			android:layout_marginBottom="50dp"
+			android:layout_marginBottom="40dp"
 			android:hint="请输入密码"
 			android:id="@+id/loginaEditText1"
 			android:background="@drawable/mets"
@@ -30,7 +30,8 @@
 			android:layout_width="match_parent"
 			android:text="确定"
 			android:id="@+id/loginaButton1"
-			android:background="@drawable/logins"/>
+			android:background="@drawable/logins"
+			android:layout_marginBottom="10dp"/>
 
 	</LinearLayout>
 

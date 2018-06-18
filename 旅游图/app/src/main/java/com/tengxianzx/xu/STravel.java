@@ -1,12 +1,33 @@
 package com.tengxianzx.xu;
 
 import org.litepal.crud.DataSupport;
+import org.litepal.annotation.Encrypt;
 
 public class STravel extends DataSupport {
 
-    private int id,sid,schengji;
-    private String sname,ssheng,sdaxue,smajor,spassword;
-	
+    private int id;
+
+	@Encrypt(algorithm = AES)
+	private String sid;
+
+	@Encrypt(algorithm = AES)
+	private String schengji;
+
+	@Encrypt(algorithm = AES)
+    private String sname;
+
+	@Encrypt(algorithm = AES)
+	private String sdaxue;
+
+	@Encrypt(algorithm = AES)
+	private String spassword;
+
+	@Encrypt(algorithm = AES)
+	private String ssheng;
+
+	@Encrypt(algorithm = AES)
+	private String smajor;
+
     public int getId() {
         return id;
     }
@@ -47,14 +68,14 @@ public class STravel extends DataSupport {
         this.smajor = smajor;
     }
 
-	public int getSid() {
+	public String getSid() {
         return sid;
     }
 
     public void setSid(int sid) {
-        this.sid = sid;
+        this.sid = sid+"";
     }
-	
+
 	public String getSpassword() {
         return spassword;
     }
@@ -62,13 +83,13 @@ public class STravel extends DataSupport {
     public void setSpassword(String spassword) {
         this.spassword = spassword;
     }
-	
-	public int getSchengji() {
+
+	public String getSchengji() {
         return schengji;
     }
 
     public void setSchengji(int sid) {
-        this.schengji = sid;
+        this.schengji = sid+"";
     }
 }
 

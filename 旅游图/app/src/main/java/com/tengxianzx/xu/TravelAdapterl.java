@@ -48,7 +48,7 @@ public class TravelAdapterl extends ArrayAdapter<Traver>
             view = convertView;
             viewHolder = (ViewHolder) view.getTag(); // 重新获取ViewHolder
         }
-        viewHolder.fruitImage.setText(fruit.getSid() + "");
+        viewHolder.fruitImage.setText(fruit.getlid() + "");
         viewHolder.fruitName.setText(fruit.getName() + "");
 		viewHolder.major.setText(fruit.getlcollege() + "  " + fruit.getmajor());
 		switch (i)
